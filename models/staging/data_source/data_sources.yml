@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+
+  - name: data_sources # name of the source 
+    schema: proyecto_final # this is the schema our raw data lives in
+    database: "{{ env_var('DBT_ENVIRONMENTS') }}BRONZEDB" # this is the name of our database
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    # freshness:
+    #   warn_after: {count: 24, period: hour}
+    #   error_after: {count: 48, period: hour}
+
+    tables:
+
+      - name: space_missions
+        # loaded_at_field: _fivetran_synced
+        columns:
+          - name: company
+          - name: location
+          - name: date
+          - name: time
+          - name: rocket
+          - name: mission
+          - name: rocketstatus
+          - name: price
+          - name: missionstatus
