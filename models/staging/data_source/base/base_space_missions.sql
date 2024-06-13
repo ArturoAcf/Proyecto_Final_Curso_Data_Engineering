@@ -1,19 +1,19 @@
-with stg_space_missions as(
+with base_spm as(
     select * from {{source('data_sources', 'space_missions')}}
 ),
 
 base_space_missions as(
     select
-        company,
-        location,
-        date,
-        time,
-        rocket,
-        mission,
-        rocketstatus,
-        price,
-        missionstatus
-    from stg_space_missions
+        mission as mission_name,
+        company as company_name,
+        location as mission_location,
+        date as mission_date,
+        time as misison_time,
+        rocket as mission_rocket,
+        rocketstatus as mission_rocket_status,
+        price as mission_price_millions,
+        missionstatus as mission_status
+    from base_spm
 )
 
 select * from base_space_missions

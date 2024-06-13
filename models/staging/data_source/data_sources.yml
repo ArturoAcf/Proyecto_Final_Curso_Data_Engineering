@@ -17,7 +17,7 @@ sources:
 
     tables:
 
-      - name: space_missions
+      - name: space_missions  # https://www.kaggle.com/datasets/saikat026/space-missions
         # loaded_at_field: _fivetran_synced
         columns:
           - name: company
@@ -29,3 +29,51 @@ sources:
           - name: rocketstatus
           - name: price
           - name: missionstatus
+
+      - name: rockets_from_1957  # https://www.kaggle.com/datasets/akhilram7/allrocketsfrom1957
+        columns:
+          - name: _row
+          - name: name
+          - name: cmp
+          - name: wiki
+          - name: status
+          - name: liftoff_thrust
+          - name: payload_to_leo
+          - name: stages
+          - name: strap_ons
+          - name: rocket_height
+          - name: price
+          - name: payload_to_gto
+          - name: fairing_diameter
+          - name: fairing_height
+
+      - name: space_agencies  # https://www.kaggle.com/code/shahraizanwar/basic-analysis-on-space-companies
+        columns:
+          - name: _row
+          - name: agency
+          - name: first_launch
+          - name: last_launch
+          - name: yeras_of_service
+
+      - name: mission_astronauts  # https://www.kaggle.com/datasets/mexwell/astronauts-in-space-missions
+        columns:
+          - name: profile_astronaut_numbers_overall
+          - name: profile_astronaut_numbers_nationwide
+          - name: profile_name
+          - name: profile_gender
+          - name: profile_birth_year
+          - name: profile_nationality
+          - name: profile_military
+          - name: profile_selection_group
+          - name: profile_selection_year
+          - name: profile_lifetime_statistics_mission_count
+          - name: mission_role
+          - name: mission_year
+          - name: mission_name
+          - name: mission_vechicles_ascent
+          - name: mission_vechicles_orbit
+          - name: mission_vechicles_decent
+          - name: mission_durations_mission_duration
+          - name: profile_lifetime_statistics_mission_duration
+          - name: mission_durations_eva_duration
+          - name: profile_lifetime_statistics_eva_duration
