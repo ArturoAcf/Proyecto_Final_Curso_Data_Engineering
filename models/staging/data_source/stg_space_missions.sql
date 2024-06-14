@@ -4,11 +4,11 @@ with base_spm as(
 
 base_space_missions as(
     select
-        {{dbt_utils.generate_surrogate_key(['mission_name', 'mission_date'])}}
+        {{dbt_utils.generate_surrogate_key(['mission_name', 'mission_date'])}} as mission_id,
         mission_name,
+        mission_date,
         company_name,
         mission_location,
-        mission_date,
         misison_time,
         mission_rocket,
         -- mission_rocket_status, -- Desaparecerá

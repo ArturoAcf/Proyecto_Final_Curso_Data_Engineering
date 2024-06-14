@@ -1,0 +1,116 @@
+version: 2
+
+models:
+  - name: int_mission_astronauts
+    description: ""
+    columns:
+      - name: astronaut_id
+        data_type: varchar
+        description: ""
+
+      - name: mission_id
+        data_type: varchar
+        description: ""
+
+      - name: astronaut_name
+        data_type: varchar
+        description: ""
+
+      - name: mission_name
+        data_type: varchar
+        description: ""
+
+      - name: mission_date
+        data_type: date
+        description: ""
+
+      - name: company_name
+        data_type: varchar
+        description: ""
+
+      - name: mission_location
+        data_type: varchar
+        description: ""
+
+      - name: misison_time
+        data_type: time
+        description: ""
+
+      - name: mission_rocket
+        data_type: varchar
+        description: ""
+
+      - name: mission_price_millions
+        data_type: varchar
+        description: ""
+
+      - name: mission_status
+        data_type: varchar
+        description: ""
+
+      - name: mission_role
+        data_type: varchar
+        description: ""
+
+      - name: mission_year
+        data_type: number
+        description: ""
+
+      - name: mission_vehicles_ascent
+        data_type: varchar
+        description: ""
+
+      - name: mission_vehicles_orbit
+        data_type: varchar
+        description: ""
+
+      - name: mission_vehicles_decent
+        data_type: varchar
+        description: ""
+
+      - name: mission_duration_hours
+        data_type: number
+        description: ""
+
+      - name: mission_duration_hours_eva
+        data_type: number
+        description: ""
+
+  - name: int_space_missions
+    description: ""
+    columns:
+      - name: mission_id
+        data_type: varchar
+        description: ""
+
+      - name: mission_name
+        data_type: varchar
+        description: ""
+
+      - name: mission_date
+        data_type: date
+        description: ""
+
+      - name: company_name
+        data_type: varchar
+        description: ""
+
+      - name: mission_location
+        data_type: varchar
+        description: ""
+
+      - name: misison_time
+        data_type: time
+        description: ""
+
+      - name: mission_rocket
+        data_type: varchar
+        description: ""
+
+      - name: mission_price_millions
+        data_type: varchar
+        description: ""
+
+      - name: mission_status
+        data_type: varchar
+        description: ""
