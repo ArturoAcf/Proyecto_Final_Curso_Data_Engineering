@@ -1,0 +1,198 @@
+version: 2
+
+models:
+  - name: dim_mission_status
+    description: ""
+    columns:
+      - name: mission_status_id
+        data_type: varchar
+        description: ""
+
+      - name: mission_status
+        data_type: varchar
+        description: ""
+
+  - name: dim_rocket_status
+    description: ""
+    columns:
+      - name: rocket_status_id
+        data_type: varchar
+        description: ""
+
+      - name: rocket_status
+        data_type: varchar
+        description: ""
+
+  - name: dim_locations
+    description: ""
+    columns:
+      - name: location_id
+        data_type: varchar
+        description: ""
+
+      - name: mission_location
+        data_type: varchar
+        description: ""
+
+      - name: address
+        data_type: varchar
+        description: ""
+
+      - name: place
+        data_type: varchar
+        description: ""
+
+      - name: state_or_city
+        data_type: varchar
+        description: ""
+
+      - name: country
+        data_type: varchar
+        description: ""
+
+  - name: dim_time
+    description: ""
+    columns:
+      - name: date_day
+        data_type: date
+        description: ""
+
+      - name: prior_date_day
+        data_type: date
+        description: ""
+
+      - name: next_date_day
+        data_type: date
+        description: ""
+
+      - name: prior_year_date_day
+        data_type: date
+        description: ""
+
+      - name: prior_year_over_year_date_day
+        data_type: date
+        description: ""
+
+      - name: day_of_week
+        data_type: number
+        description: ""
+
+      - name: day_of_week_iso
+        data_type: number
+        description: ""
+
+      - name: day_of_week_name
+        data_type: varchar
+        description: ""
+
+      - name: day_of_week_name_short
+        data_type: varchar
+        description: ""
+
+      - name: day_of_month
+        data_type: number
+        description: ""
+
+      - name: day_of_year
+        data_type: number
+        description: ""
+
+      - name: week_start_date
+        data_type: date
+        description: ""
+
+      - name: week_end_date
+        data_type: date
+        description: ""
+
+      - name: prior_year_week_start_date
+        data_type: date
+        description: ""
+
+      - name: prior_year_week_end_date
+        data_type: date
+        description: ""
+
+      - name: week_of_year
+        data_type: number
+        description: ""
+
+      - name: iso_week_start_date
+        data_type: date
+        description: ""
+
+      - name: iso_week_end_date
+        data_type: date
+        description: ""
+
+      - name: prior_year_iso_week_start_date
+        data_type: date
+        description: ""
+
+      - name: prior_year_iso_week_end_date
+        data_type: date
+        description: ""
+
+      - name: iso_week_of_year
+        data_type: number
+        description: ""
+
+      - name: prior_year_week_of_year
+        data_type: number
+        description: ""
+
+      - name: prior_year_iso_week_of_year
+        data_type: number
+        description: ""
+
+      - name: month_of_year
+        data_type: number
+        description: ""
+
+      - name: month_name
+        data_type: varchar
+        description: ""
+
+      - name: month_name_short
+        data_type: varchar
+        description: ""
+
+      - name: month_start_date
+        data_type: date
+        description: ""
+
+      - name: month_end_date
+        data_type: date
+        description: ""
+
+      - name: prior_year_month_start_date
+        data_type: date
+        description: ""
+
+      - name: prior_year_month_end_date
+        data_type: date
+        description: ""
+
+      - name: quarter_of_year
+        data_type: number
+        description: ""
+
+      - name: quarter_start_date
+        data_type: date
+        description: ""
+
+      - name: quarter_end_date
+        data_type: date
+        description: ""
+
+      - name: year_number
+        data_type: number
+        description: ""
+
+      - name: year_start_date
+        data_type: date
+        description: ""
+
+      - name: year_end_date
+        data_type: date
+        description: ""

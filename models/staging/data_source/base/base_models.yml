@@ -1,0 +1,206 @@
+version: 2
+
+models:
+  - name: base_mission_astronauts
+    description: ""
+    columns:
+      - name: world_astronaut_number
+        data_type: number
+        description: ""
+
+      - name: nation_astronaut_number
+        data_type: number
+        description: ""
+
+      - name: astronaut_name
+        data_type: varchar
+        description: ""
+
+      - name: astronaut_gender
+        data_type: varchar
+        description: ""
+
+      - name: astronaut_birth_year
+        data_type: number
+        description: ""
+
+      - name: astronaut_nationality
+        data_type: varchar
+        description: ""
+
+      - name: astronaut_is_militar
+        data_type: boolean
+        description: ""
+
+      - name: astronaut_selection_group
+        data_type: varchar
+        description: ""
+
+      - name: astronaut_selection_year
+        data_type: number
+        description: ""
+
+      - name: astronaut_mission_count
+        data_type: number
+        description: ""
+
+      - name: mission_role
+        data_type: varchar
+        description: ""
+
+      - name: mission_year
+        data_type: number
+        description: ""
+
+      - name: mission_name
+        data_type: varchar
+        description: ""
+
+      - name: mission_vehicles_ascent
+        data_type: varchar
+        description: ""
+
+      - name: mission_vehicles_orbit
+        data_type: varchar
+        description: ""
+
+      - name: mission_vehicles_decent
+        data_type: varchar
+        description: ""
+
+      - name: mission_duration_hours
+        data_type: number
+        description: ""
+
+      - name: astronaut_total_hours_in_space
+        data_type: number
+        description: ""
+
+      - name: mission_duration_hours_eva
+        data_type: number
+        description: ""
+
+      - name: astronaut_total_hours_in_space_eva
+        data_type: number
+        description: ""
+
+  - name: base_rockets
+    description: ""
+    columns:
+      - name: _row
+        data_type: number
+        description: ""
+
+      - name: rocket_name
+        data_type: varchar
+        description: ""
+
+      - name: company_name
+        data_type: varchar
+        description: ""
+
+      - name: wiki
+        data_type: varchar
+        description: ""
+
+      - name: rocket_status
+        data_type: varchar
+        description: ""
+
+      - name: liftoff_thrust
+        data_type: varchar
+        description: ""
+
+      - name: payload_to_leo
+        data_type: number
+        description: ""
+
+      - name: stages
+        data_type: number
+        description: ""
+
+      - name: strap_ons
+        data_type: number
+        description: ""
+
+      - name: rocket_height
+        data_type: varchar
+        description: ""
+
+      - name: rocket_price
+        data_type: varchar
+        description: ""
+
+      - name: payload_to_gto
+        data_type: number
+        description: ""
+
+      - name: fairing_diameter
+        data_type: varchar
+        description: ""
+
+      - name: fairing_height
+        data_type: varchar
+        description: ""
+
+  - name: base_space_agencies
+    description: ""
+    columns:
+      - name: _row
+        data_type: number
+        description: ""
+
+      - name: agency_name
+        data_type: varchar
+        description: ""
+
+      - name: first_launch_date
+        data_type: date
+        description: ""
+
+      - name: last_launch_date
+        data_type: date
+        description: ""
+
+      - name: years_of_service
+        data_type: number
+        description: ""
+
+  - name: base_space_missions
+    description: ""
+    columns:
+      - name: mission_name
+        data_type: varchar
+        description: ""
+
+      - name: company_name
+        data_type: varchar
+        description: ""
+
+      - name: mission_location
+        data_type: varchar
+        description: ""
+
+      - name: mission_date
+        data_type: date
+        description: ""
+
+      - name: misison_time
+        data_type: time
+        description: ""
+
+      - name: mission_rocket
+        data_type: varchar
+        description: ""
+
+      - name: mission_rocket_status
+        data_type: varchar
+        description: ""
+
+      - name: mission_price_millions
+        data_type: varchar
+        description: ""
+
+      - name: mission_status
+        data_type: varchar
+        description: ""
