@@ -23,7 +23,7 @@ stg_mission_astronauts as(
         basemas.mission_year,
         basemas.mission_vehicles_ascent,
         basemas.mission_vehicles_orbit,
-        basemas.mission_vehicles_decent,
+        basemas.mission_vehicles_descent,
         basemas.mission_duration_hours,
         basemas.mission_duration_hours_eva,
     from base_mas basemas

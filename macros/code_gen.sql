@@ -35,6 +35,7 @@
             "dim_rockets",
             "dim_space_agencies",
             "dim_astronaut_roles",
+            "dim_vehicle",
             "fct_space_missions"
         ]
     )

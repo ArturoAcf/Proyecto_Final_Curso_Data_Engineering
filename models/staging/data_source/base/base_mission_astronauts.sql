@@ -19,7 +19,7 @@ base_astronauts as(
         mission_name,
         mission_vechicles_ascent as mission_vehicles_ascent,
         mission_vechicles_orbit as mission_vehicles_orbit,
-        mission_vechicles_decent as mission_vehicles_decent,
+        mission_vechicles_decent as mission_vehicles_descent,
         mission_durations_mission_duration as mission_duration_hours,
         profile_lifetime_statistics_mission_duration as astronaut_total_hours_in_space,
         mission_durations_eva_duration as mission_duration_hours_eva,

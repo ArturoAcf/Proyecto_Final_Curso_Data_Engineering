@@ -2,248 +2,248 @@ version: 2
 
 models:
   - name: stg_astronauts
-    description: ""
+    description: "Staging table for astronaut data."
     columns:
       - name: astronaut_id
         data_type: varchar
-        description: ""
+        description: "Identifier for the astronaut."
 
       - name: astronaut_name
         data_type: varchar
-        description: ""
+        description: "Name of the astronaut."
 
       - name: world_astronaut_number
         data_type: number
-        description: ""
+        description: "Worldwide astronaut number."
 
       - name: nation_astronaut_number
         data_type: number
-        description: ""
+        description: "National astronaut number."
 
       - name: astronaut_gender
         data_type: varchar
-        description: ""
+        description: "Gender of the astronaut."
 
       - name: astronaut_birth_year
         data_type: number
-        description: ""
+        description: "Year of birth of the astronaut."
 
       - name: astronaut_nationality
         data_type: varchar
-        description: ""
+        description: "Nationality of the astronaut."
 
       - name: astronaut_is_militar
         data_type: boolean
-        description: ""
+        description: "Indicates if the astronaut has a military background."
 
       - name: astronaut_selection_group
         data_type: varchar
-        description: ""
+        description: "Group in which the astronaut was selected."
 
       - name: astronaut_selection_year
         data_type: number
-        description: ""
+        description: "Year of astronaut selection."
 
       - name: astronaut_mission_count
         data_type: number
-        description: ""
+        description: "Total number of missions the astronaut has participated in."
 
       - name: astronaut_total_hours_in_space
         data_type: number
-        description: ""
+        description: "Total hours spent by the astronaut in space."
 
       - name: astronaut_total_hours_in_space_eva
         data_type: number
-        description: ""
+        description: "Total hours the astronaut has spent in spacewalks (EVA)."
 
   - name: stg_mission_astronauts
-    description: ""
+    description: "Staging table for mission-astronaut relationships."
     columns:
       - name: astronaut_id
         data_type: varchar
-        description: ""
+        description: "Identifier for the astronaut."
 
       - name: mission_id
         data_type: varchar
-        description: ""
+        description: "Identifier for the mission."
 
       - name: astronaut_name
         data_type: varchar
-        description: ""
+        description: "Name of the astronaut."
 
       - name: mission_name
         data_type: varchar
-        description: ""
+        description: "Name of the mission."
 
       - name: mission_date
         data_type: date
-        description: ""
+        description: "Date of the mission."
 
       - name: company_name
         data_type: varchar
-        description: ""
+        description: "Name of the company organizing the mission."
 
       - name: mission_location
         data_type: varchar
-        description: ""
+        description: "Location of the mission."
 
       - name: misison_time
         data_type: time
-        description: ""
+        description: "Time of the mission."
 
       - name: mission_rocket
         data_type: varchar
-        description: ""
+        description: "Name of the rocket used in the mission."
 
       - name: mission_price_millions
         data_type: varchar
-        description: ""
+        description: "Cost of the mission in millions."
 
       - name: mission_status
         data_type: varchar
-        description: ""
+        description: "{{ doc('mission_status') }}"
 
       - name: mission_role
         data_type: varchar
-        description: ""
+        description: "Role of the astronaut in the mission."
 
       - name: mission_year
         data_type: number
-        description: ""
+        description: "Year of the mission."
 
       - name: mission_vehicles_ascent
         data_type: varchar
-        description: ""
+        description: "Vehicles used for ascent in the mission."
 
       - name: mission_vehicles_orbit
         data_type: varchar
-        description: ""
+        description: "Vehicles used for orbit in the mission."
 
       - name: mission_vehicles_decent
         data_type: varchar
-        description: ""
+        description: "Vehicles used for descent in the mission."
 
       - name: mission_duration_hours
         data_type: number
-        description: ""
+        description: "Duration of the mission in hours."
 
       - name: mission_duration_hours_eva
         data_type: number
-        description: ""
+        description: "Duration of extravehicular activity (EVA) during the mission."
 
   - name: stg_rockets
-    description: ""
+    description: "Staging table for rocket data."
     columns:
       - name: rocket_id
         data_type: varchar
-        description: ""
+        description: "Identifier for the rocket."
 
       - name: rocket_name
         data_type: varchar
-        description: ""
+        description: "Name of the rocket."
 
       - name: company_name
         data_type: varchar
-        description: ""
+        description: "Name of the company manufacturing the rocket."
 
       - name: rocket_status
         data_type: varchar
-        description: ""
+        description: "{{ doc('rocket_status') }}"
 
       - name: liftoff_thrust
         data_type: varchar
-        description: ""
+        description: "Thrust generated during liftoff."
 
       - name: payload_to_leo
         data_type: number
-        description: ""
+        description: "Payload capacity to Low Earth Orbit (LEO) in kilograms."
 
       - name: stages
         data_type: number
-        description: ""
+        description: "Number of stages in the rocket."
 
       - name: strap_ons
         data_type: number
-        description: ""
+        description: "Number of strap-on boosters attached to the rocket."
 
       - name: rocket_height
         data_type: varchar
-        description: ""
+        description: "Height of the rocket."
 
       - name: rocket_price_millon_dollars
         data_type: number
-        description: ""
+        description: "Cost of the rocket in million dollars."
 
       - name: payload_to_gto
         data_type: number
-        description: ""
+        description: "Payload capacity to Geostationary Transfer Orbit (GTO) in kilograms."
 
       - name: fairing_diameter
         data_type: varchar
-        description: ""
+        description: "Diameter of the fairing used to protect payloads."
 
       - name: fairing_height
         data_type: varchar
-        description: ""
+        description: "Height of the fairing used to protect payloads."
 
   - name: stg_space_agencies
-    description: ""
+    description: "Staging table for space agency data."
     columns:
       - name: agency_name_id
         data_type: varchar
-        description: ""
+        description: "Identifier for the agency name."
 
       - name: agency_name
         data_type: varchar
-        description: ""
+        description: "Name of the space agency."
 
       - name: first_launch_date
         data_type: date
-        description: ""
+        description: "Date of the first launch by the agency."
 
       - name: last_launch_date
         data_type: date
-        description: ""
+        description: "Date of the most recent launch by the agency."
 
       - name: years_of_service
         data_type: number
-        description: ""
+        description: "Total years of service of the space agency."
 
   - name: stg_space_missions
-    description: ""
+    description: "Staging table for space mission data."
     columns:
       - name: mission_id
         data_type: varchar
-        description: ""
+        description: "Identifier for the mission."
 
       - name: mission_name
         data_type: varchar
-        description: ""
+        description: "Name of the mission."
 
       - name: mission_date
         data_type: date
-        description: ""
+        description: "Date of the mission."
 
       - name: company_name
         data_type: varchar
-        description: ""
+        description: "Name of the company conducting the mission."
 
       - name: mission_location
         data_type: varchar
-        description: ""
+        description: "Location of the mission."
 
       - name: misison_time
         data_type: time
-        description: ""
+        description: "Time of day when the mission is scheduled."
 
       - name: mission_rocket
         data_type: varchar
-        description: ""
+        description: "Name of the rocket used for the mission."
 
       - name: mission_price_millions
         data_type: varchar
-        description: ""
+        description: "Cost of the mission in millions."
 
       - name: mission_status
         data_type: varchar
-        description: ""
+        description: "{{ doc('mission_status') }}"

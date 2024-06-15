@@ -6,49 +6,49 @@ models:
     columns:
       - name: mission_status_id
         data_type: varchar
-        description: ""
+        description: "Mission status ID."
 
       - name: mission_status
         data_type: varchar
-        description: ""
+        description: '{{ doc("mission_status") }}'
 
   - name: dim_rocket_status
     description: ""
     columns:
       - name: rocket_status_id
         data_type: varchar
-        description: ""
+        description: "Rocket status ID."
 
       - name: rocket_status
         data_type: varchar
-        description: ""
+        description: '{{ doc("rocket_status") }}'
 
   - name: dim_locations
-    description: ""
+    description: "Dimension table for locations."
     columns:
       - name: location_id
         data_type: varchar
-        description: ""
+        description: "Unique location ID."
 
       - name: mission_location
         data_type: varchar
-        description: ""
+        description: "Name of the mission location."
 
       - name: address
         data_type: varchar
-        description: ""
+        description: "Address of the location."
 
       - name: place
         data_type: varchar
-        description: ""
+        description: "Specific place or landmark."
 
       - name: state_or_city
         data_type: varchar
-        description: ""
+        description: "State or city where the location is situated."
 
       - name: country
         data_type: varchar
-        description: ""
+        description: "Country where the location is located."
 
   - name: dim_time
     description: ""
