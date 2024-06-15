@@ -169,6 +169,11 @@ models:
       - name: astronaut_id
         data_type: varchar
         description: "Unique ID of the astronaut."
+        tests:
+          - relationships:
+              to: ref('dim_astronauts')
+              field: astronaut_id
+
 
       - name: astronaut_name
         data_type: varchar
