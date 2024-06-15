@@ -7,6 +7,9 @@ models:
       - name: astronaut_id
         data_type: varchar
         description: "Identifier for the astronaut."
+        tests:
+          - unique
+          - not_null
 
       - name: astronaut_name
         data_type: varchar
@@ -35,14 +38,6 @@ models:
       - name: astronaut_is_militar
         data_type: boolean
         description: "Indicates if the astronaut has a military background."
-
-      - name: astronaut_selection_group
-        data_type: varchar
-        description: "Group in which the astronaut was selected."
-
-      - name: astronaut_selection_year
-        data_type: number
-        description: "Year of astronaut selection."
 
       - name: astronaut_mission_count
         data_type: number
@@ -131,12 +126,23 @@ models:
         data_type: number
         description: "Duration of extravehicular activity (EVA) during the mission."
 
+      - name: astronaut_selection_group
+        data_type: varchar
+        description: "Group in which the astronaut was selected."
+
+      - name: astronaut_selection_year
+        data_type: number
+        description: "Year of astronaut selection."
+
   - name: stg_rockets
     description: "Staging table for rocket data."
     columns:
       - name: rocket_id
         data_type: varchar
         description: "Identifier for the rocket."
+        tests:
+          - unique
+          - not_null
 
       - name: rocket_name
         data_type: varchar
@@ -192,6 +198,9 @@ models:
       - name: agency_name_id
         data_type: varchar
         description: "Identifier for the agency name."
+        tests:
+          - unique
+          - not_null
 
       - name: agency_name
         data_type: varchar
@@ -215,6 +224,9 @@ models:
       - name: mission_id
         data_type: varchar
         description: "Identifier for the mission."
+        tests:
+          - unique
+          - not_null
 
       - name: mission_name
         data_type: varchar
@@ -232,7 +244,7 @@ models:
         data_type: varchar
         description: "Location of the mission."
 
-      - name: misison_time
+      - name: mission_time
         data_type: time
         description: "Time of day when the mission is scheduled."
 

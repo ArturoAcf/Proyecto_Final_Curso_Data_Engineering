@@ -15,7 +15,7 @@ int_mission_astronauts as(
         stgspm.mission_date,
         stgspm.company_name,
         stgspm.mission_location,
-        stgspm.misison_time,
+        stgspm.mission_time,
         stgspm.mission_rocket,
         stgspm.mission_price_millions,
         stgspm.mission_status,
@@ -26,6 +26,8 @@ int_mission_astronauts as(
         stgmas.mission_vehicles_descent,
         stgmas.mission_duration_hours,
         stgmas.mission_duration_hours_eva,
+        stgmas.astronaut_selection_group,
+        stgmas.astronaut_selection_year
     from stg_mas stgmas
     join
     stg_space_missions stgspm

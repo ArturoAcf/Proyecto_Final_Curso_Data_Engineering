@@ -32,7 +32,7 @@ models:
         data_type: varchar
         description: "Location of the mission launch."
 
-      - name: misison_time
+      - name: mission_time
         data_type: time
         description: "Time of the mission."
 
@@ -76,6 +76,14 @@ models:
         data_type: number
         description: "EVA duration in hours."
 
+      - name: astronaut_selection_group
+        data_type: varchar
+        description: "Group in which the astronaut was selected."
+
+      - name: astronaut_selection_year
+        data_type: number
+        description: "Year of astronaut selection."
+
   - name: int_space_missions
     description: "Details of space missions."
     columns:
@@ -99,7 +107,7 @@ models:
         data_type: varchar
         description: "Location of the mission launch."
 
-      - name: misison_time
+      - name: mission_time
         data_type: time
         description: "Time of the mission."
 

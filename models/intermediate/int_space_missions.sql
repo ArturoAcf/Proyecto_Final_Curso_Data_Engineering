@@ -9,7 +9,7 @@ int_space_missions as(
         mission_date,
         company_name,
         mission_location,
-        misison_time,
+        mission_time,
         mission_rocket,
         mission_price_millions,
         mission_status

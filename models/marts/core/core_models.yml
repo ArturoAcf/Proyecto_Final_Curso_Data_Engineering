@@ -7,6 +7,9 @@ models:
       - name: mission_status_id
         data_type: varchar
         description: "Mission status ID."
+        tests:
+          - unique
+          - not_null
 
       - name: mission_status
         data_type: varchar
@@ -18,6 +21,9 @@ models:
       - name: rocket_status_id
         data_type: varchar
         description: "Rocket status ID."
+        tests:
+          - unique
+          - not_null
 
       - name: rocket_status
         data_type: varchar
@@ -29,6 +35,9 @@ models:
       - name: location_id
         data_type: varchar
         description: "Unique location ID."
+        tests:
+          - unique
+          - not_null
 
       - name: mission_location
         data_type: varchar

@@ -15,7 +15,7 @@ stg_mission_astronauts as(
         basespm.mission_date,
         basespm.company_name,
         basespm.mission_location,
-        basespm.misison_time,
+        basespm.mission_time,
         basespm.mission_rocket,
         basespm.mission_price_millions,
         basespm.mission_status,
@@ -26,6 +26,8 @@ stg_mission_astronauts as(
         basemas.mission_vehicles_descent,
         basemas.mission_duration_hours,
         basemas.mission_duration_hours_eva,
+        basemas.astronaut_selection_group,
+        basemas.astronaut_selection_year,
     from base_mas basemas
     join
     base_space_missions basespm
