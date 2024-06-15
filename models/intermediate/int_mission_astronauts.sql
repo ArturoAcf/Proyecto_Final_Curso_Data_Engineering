@@ -8,9 +8,11 @@ stg_space_missions as(
 
 int_mission_astronauts as(
     select
-        {{dbt_utils.generate_surrogate_key(['stgmas.astronaut_name'])}} as astronaut_id,
+        {{dbt_utils.generate_surrogate_key(['stgmas.astronaut_name', 'stgmas.world_astronaut_number', 'stgmas.nation_astronaut_number', 'stgmas.astronaut_mission_count'])}} as astronaut_id,
         {{dbt_utils.generate_surrogate_key(['stgspm.mission_name', 'stgspm.mission_date'])}} as mission_id,
         stgmas.astronaut_name,
+        stgmas.world_astronaut_number,
+        stgmas.nation_astronaut_number,
         stgspm.mission_name,
         stgspm.mission_date,
         stgspm.company_name,
