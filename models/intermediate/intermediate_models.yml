@@ -2,115 +2,115 @@ version: 2
 
 models:
   - name: int_mission_astronauts
-    description: ""
+    description: "Details of astronaut missions."
     columns:
       - name: astronaut_id
         data_type: varchar
-        description: ""
+        description: "Unique astronaut ID."
 
       - name: mission_id
         data_type: varchar
-        description: ""
+        description: "Unique mission ID."
 
       - name: astronaut_name
         data_type: varchar
-        description: ""
+        description: "Astronaut's full name."
 
       - name: mission_name
         data_type: varchar
-        description: ""
+        description: "Name of the mission."
 
       - name: mission_date
         data_type: date
-        description: ""
+        description: "Date of the mission."
 
       - name: company_name
         data_type: varchar
-        description: ""
+        description: "Name of the organizing company."
 
       - name: mission_location
         data_type: varchar
-        description: ""
+        description: "Location of the mission launch."
 
       - name: misison_time
         data_type: time
-        description: ""
+        description: "Time of the mission."
 
       - name: mission_rocket
         data_type: varchar
-        description: ""
+        description: "Name of the rocket."
 
       - name: mission_price_millions
         data_type: varchar
-        description: ""
+        description: "Cost in millions."
 
       - name: mission_status
         data_type: varchar
-        description: ""
+        description: "{{ doc('mission_status') }}"
 
       - name: mission_role
         data_type: varchar
-        description: ""
+        description: "Role of the astronaut."
 
       - name: mission_year
         data_type: number
-        description: ""
+        description: "Year of the mission."
 
       - name: mission_vehicles_ascent
         data_type: varchar
-        description: ""
+        description: "Ascent vehicles used."
 
       - name: mission_vehicles_orbit
         data_type: varchar
-        description: ""
+        description: "Orbit vehicles used."
 
-      - name: mission_vehicles_decent
+      - name: mission_vehicles_descent
         data_type: varchar
-        description: ""
+        description: "Descent vehicles used."
 
       - name: mission_duration_hours
         data_type: number
-        description: ""
+        description: "Total mission duration in hours."
 
       - name: mission_duration_hours_eva
         data_type: number
-        description: ""
+        description: "EVA duration in hours."
 
   - name: int_space_missions
-    description: ""
+    description: "Details of space missions."
     columns:
       - name: mission_id
         data_type: varchar
-        description: ""
+        description: "Unique mission ID."
 
       - name: mission_name
         data_type: varchar
-        description: ""
+        description: "Name of the mission."
 
       - name: mission_date
         data_type: date
-        description: ""
+        description: "Date of the mission."
 
       - name: company_name
         data_type: varchar
-        description: ""
+        description: "Name of the organizing company."
 
       - name: mission_location
         data_type: varchar
-        description: ""
+        description: "Location of the mission launch."
 
       - name: misison_time
         data_type: time
-        description: ""
+        description: "Time of the mission."
 
       - name: mission_rocket
         data_type: varchar
-        description: ""
+        description: "Name of the rocket."
 
       - name: mission_price_millions
         data_type: varchar
-        description: ""
+        description: "Cost in millions."
 
       - name: mission_status
         data_type: varchar
-        description: ""
+        description: "{{ doc('mission_status') }}"

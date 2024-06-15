@@ -23,7 +23,7 @@ int_mission_astronauts as(
         stgmas.mission_year,
         stgmas.mission_vehicles_ascent,
         stgmas.mission_vehicles_orbit,
-        stgmas.mission_vehicles_decent,
+        stgmas.mission_vehicles_descent,
         stgmas.mission_duration_hours,
         stgmas.mission_duration_hours_eva,
     from stg_mas stgmas
