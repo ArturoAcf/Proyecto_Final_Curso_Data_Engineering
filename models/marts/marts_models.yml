@@ -7,6 +7,9 @@ models:
       - name: astronaut_id
         data_type: varchar
         description: "Unique astronaut ID."
+        tests:
+          - unique
+          - not_null
 
       - name: astronaut_name
         data_type: varchar
@@ -36,14 +39,6 @@ models:
         data_type: boolean
         description: "Indicates if the astronaut has a military background."
 
-      - name: astronaut_selection_group
-        data_type: varchar
-        description: "Group in which the astronaut was selected."
-
-      - name: astronaut_selection_year
-        data_type: number
-        description: "Year of astronaut selection."
-
       - name: astronaut_mission_count
         data_type: number
         description: "Total number of missions the astronaut has participated in."
@@ -62,6 +57,9 @@ models:
       - name: rocket_id
         data_type: varchar
         description: "Unique rocket ID."
+        tests:
+          - unique
+          - not_null
 
       - name: rocket_name
         data_type: varchar
@@ -117,6 +115,9 @@ models:
       - name: agency_id
         data_type: varchar
         description: "Unique agency ID."
+        tests:
+          - unique
+          - not_null
 
       - name: agency_name
         data_type: varchar
@@ -140,6 +141,9 @@ models:
       - name: role_id
         data_type: varchar
         description: "Astronaut role ID."
+        tests:
+          - unique
+          - not_null
 
       - name: mission_role
         data_type: varchar
@@ -151,6 +155,9 @@ models:
       - name: vehicle_id
         data_type: varchar
         description: "Vehicle ID."
+        tests:
+          - unique
+          - not_null
 
       - name: value
         data_type: varchar
@@ -211,7 +218,7 @@ models:
         data_type: varchar
         description: "Location of the mission launch."
 
-      - name: misison_time
+      - name: mission_time
         data_type: time
         description: "Time of the mission."
 
@@ -226,4 +233,12 @@ models:
       - name: mission_status
         data_type: varchar
         description: "{{ doc('mission_status') }}"
+
+      - name: astronaut_selection_group
+        data_type: varchar
+        description: "Group in which the astronaut was selected."
+
+      - name: astronaut_selection_year
+        data_type: number
+        description: "Year of astronaut selection."
 

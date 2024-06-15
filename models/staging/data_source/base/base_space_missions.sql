@@ -8,7 +8,7 @@ base_space_missions as(
         company as company_name,
         location as mission_location,
         date as mission_date,
-        time as misison_time,
+        time as mission_time,
         rocket as mission_rocket,
         rocketstatus as mission_rocket_status,
         price as mission_price_millions,

@@ -185,7 +185,7 @@ models:
         data_type: date
         description: "Date of the space mission."
 
-      - name: misison_time
+      - name: missison_time
         data_type: time
         description: "Time of the space mission."
 

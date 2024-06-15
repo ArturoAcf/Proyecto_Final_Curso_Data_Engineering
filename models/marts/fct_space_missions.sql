@@ -22,10 +22,12 @@ fct_space_missions as(
         ispm.mission_date,
         {{dbt_utils.generate_surrogate_key(['ispm.company_name'])}} as company_name_id,
         {{dbt_utils.generate_surrogate_key(['ispm.mission_location'])}} as mission_location_id,
-        ispm.misison_time,
+        ispm.mission_time,
         {{dbt_utils.generate_surrogate_key(['ispm.mission_rocket'])}} as mission_rocket_id,
         ispm.mission_price_millions,
-        {{dbt_utils.generate_surrogate_key(['ispm.mission_status'])}} as mission_status_id
+        {{dbt_utils.generate_surrogate_key(['ispm.mission_status'])}} as mission_status_id,
+        imas.astronaut_selection_group,
+        imas.astronaut_selection_year
     from int_space_missions ispm
     full outer join int_mission_astronauts imas
     on ispm.mission_name = imas.mission_name

@@ -12,8 +12,6 @@ dim_astronauts as(
         astronaut_birth_year,
         astronaut_nationality,
         astronaut_is_militar,
-        astronaut_selection_group,
-        astronaut_selection_year,
         astronaut_mission_count,
         astronaut_total_hours_in_space,
         astronaut_total_hours_in_space_eva
