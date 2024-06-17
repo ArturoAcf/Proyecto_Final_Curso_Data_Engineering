@@ -12,7 +12,8 @@ base_space_missions as(
         rocket as mission_rocket,
         rocketstatus as mission_rocket_status,
         price as mission_price_millions,
-        missionstatus as mission_status
+        missionstatus as mission_status,
+        loaded_at
     from base_spm
 )
 

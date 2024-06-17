@@ -57,6 +57,10 @@ sources:
             data_type: varchar
             description: "Status of the mission."
 
+          - name: loaded_at
+            data_type: timestamp
+            description: "When the record was loaded into the database."
+
       # https://www.kaggle.com/datasets/akhilram7/allrocketsfrom1957
       - name: rockets_from_1957
         description: "Dataset containing information about rockets launched since 1957."
@@ -117,6 +121,10 @@ sources:
             data_type: varchar
             description: "Height of the rocket's fairing."
 
+          - name: loaded_at
+            data_type: timestamp
+            description: "When the record was loaded into the database."
+
       # https://www.kaggle.com/code/shahraizanwar/basic-analysis-on-space-companies
       - name: space_agencies
         description: "Dataset containing information about space agencies."
@@ -140,6 +148,10 @@ sources:
           - name: yeras_of_service
             data_type: number
             description: "Total number of years the space agency has been in service."
+
+          - name: loaded_at
+            data_type: timestamp
+            description: "When the record was loaded into the database."
 
       # https://www.kaggle.com/datasets/mexwell/astronauts-in-space-missions
       - name: mission_astronauts
@@ -220,3 +232,7 @@ sources:
           - name: mission_durations_eva_duration
             data_type: number
             description: "Duration of Extra-Vehicular Activity (EVA) during the mission."
+
+          - name: loaded_at
+            data_type: timestamp
+            description: "When the record was loaded into the database."

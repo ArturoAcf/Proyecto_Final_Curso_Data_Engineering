@@ -122,3 +122,7 @@ models:
       - name: mission_status
         data_type: varchar
         description: "{{ doc('mission_status') }}"
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."

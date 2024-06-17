@@ -14,7 +14,8 @@ stg_astronauts as(
         astronaut_is_militar,
         astronaut_mission_count,
         astronaut_total_hours_in_space,
-        astronaut_total_hours_in_space_eva
+        astronaut_total_hours_in_space_eva,
+        loaded_at
     from stg_as
 )
 

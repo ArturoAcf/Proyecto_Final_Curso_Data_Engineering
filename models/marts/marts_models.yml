@@ -51,6 +51,10 @@ models:
         data_type: number
         description: "Total hours the astronaut has spent in spacewalks (EVA)."
 
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
+
   - name: dim_rockets
     description: "Dimension table for rockets."
     columns:
@@ -109,6 +113,10 @@ models:
         data_type: varchar
         description: "Height of the fairing."
 
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
+
   - name: dim_space_agencies
     description: "Dimension table for space agencies."
     columns:
@@ -134,6 +142,10 @@ models:
       - name: years_of_service
         data_type: number
         description: "Total years of service of the space agency."
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
 
   - name: dim_astronaut_roles
     description: ""
@@ -174,26 +186,41 @@ models:
               to: ref('dim_astronauts')
               field: astronaut_id
 
-
       - name: astronaut_name
         data_type: varchar
         description: "Name of the astronaut."
 
-      - name: mission_role
+      - name: astronaut_role_id
         data_type: varchar
         description: "Role of the astronaut in the mission."
+        tests:
+            - relationships:
+                to: ref('dim_astronaut_role')
+                field: role_id
 
-      - name: mission_vehicles_ascent
+      - name: ascent_vehicle_id
         data_type: varchar
         description: "Vehicle used for ascent in the mission."
+        tests:
+            - relationships:
+                to: ref('dim_vehicle')
+                field: vehicle_id
 
-      - name: mission_vehicles_orbit
+      - name: orbit_vehicle_id
         data_type: varchar
         description: "Vehicle used for orbit in the mission."
+        tests:
+            - relationships:
+                to: ref('dim_vehicle')
+                field: vehicle_id
 
-      - name: mission_vehicles_descent
+      - name: descent_vehicle_id
         data_type: varchar
         description: "Vehicle used for descent in the mission."
+        tests:
+            - relationships:
+                to: ref('dim_vehicle')
+                field: vehicle_id
 
       - name: mission_duration_hours
         data_type: number
@@ -215,29 +242,45 @@ models:
         data_type: date
         description: "Date of the mission."
 
-      - name: company_name
+      - name: company_name_id
         data_type: varchar
         description: "Name of the company organizing the mission."
+        tests:
+            - relationships:
+                to: ref('dim_space_agencies')
+                field: agency_id
 
-      - name: mission_location
+      - name: mission_location_id
         data_type: varchar
         description: "Location of the mission launch."
+        tests:
+            - relationships:
+                to: ref('dim_locations')
+                field: location_id
 
       - name: mission_time
         data_type: time
         description: "Time of the mission."
 
-      - name: mission_rocket
+      - name: mission_rocket_id
         data_type: varchar
         description: "Name of the rocket used in the mission."
+        tests:
+            - relationships:
+                to: ref('dim_rockets')
+                field: rocket_id
 
       - name: mission_price_millions
         data_type: varchar
         description: "Cost of the mission in millions."
 
-      - name: mission_status
+      - name: mission_status_id
         data_type: varchar
         description: "{{ doc('mission_status') }}"
+        tests:
+            - relationships:
+                to: ref('dim_mission_status')
+                field: mission_status_id
 
       - name: astronaut_selection_group
         data_type: varchar
@@ -246,4 +289,8 @@ models:
       - name: astronaut_selection_year
         data_type: number
         description: "Year of astronaut selection."
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
 

@@ -8,7 +8,8 @@ stg_space_agencies as(
         agency_name,
         first_launch_date,
         last_launch_date,
-        years_of_service
+        years_of_service,
+        loaded_at
     from stg_spag
 )
 

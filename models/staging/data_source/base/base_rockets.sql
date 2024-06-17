@@ -17,7 +17,8 @@ base_rc as(
         price as rocket_price,
         payload_to_gto,
         fairing_diameter,
-        fairing_height
+        fairing_height,
+        loaded_at
     from base_rockets
 )
 

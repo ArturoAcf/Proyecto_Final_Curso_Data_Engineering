@@ -27,7 +27,8 @@ fct_space_missions as(
         ispm.mission_price_millions,
         {{dbt_utils.generate_surrogate_key(['ispm.mission_status'])}} as mission_status_id,
         imas.astronaut_selection_group,
-        imas.astronaut_selection_year
+        imas.astronaut_selection_year,
+        ispm.loaded_at
     from int_space_missions ispm
     full outer join int_mission_astronauts imas
     on ispm.mission_name = imas.mission_name

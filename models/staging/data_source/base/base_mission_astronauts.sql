@@ -23,7 +23,8 @@ base_astronauts as(
         mission_durations_mission_duration as mission_duration_hours,
         profile_lifetime_statistics_mission_duration as astronaut_total_hours_in_space,
         mission_durations_eva_duration as mission_duration_hours_eva,
-        profile_lifetime_statistics_eva_duration as astronaut_total_hours_in_space_eva
+        profile_lifetime_statistics_eva_duration as astronaut_total_hours_in_space_eva,
+        loaded_at
     from base_as
 )
 

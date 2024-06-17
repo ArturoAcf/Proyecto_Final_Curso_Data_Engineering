@@ -8,7 +8,8 @@ base_s_agencies as(
         agency as agency_name,
         first_launch as first_launch_date,
         last_launch as last_launch_date,
-        years_of_service
+        years_of_service,
+        loaded_at
     from base_sag
 )
 
