@@ -84,6 +84,10 @@ models:
         data_type: number
         description: "Total hours the astronaut has spent in spacewalks (EVA)."
 
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
+
   - name: base_rockets
     description: "Base table containing data about rockets."
     columns:
@@ -143,6 +147,10 @@ models:
         data_type: varchar
         description: "Height of the fairing."
 
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
+
   - name: base_space_agencies
     description: "Base table containing data about space agencies."
     columns:
@@ -165,6 +173,10 @@ models:
       - name: years_of_service
         data_type: number
         description: "Total years of service of the space agency."
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
 
   - name: base_space_missions
     description: "Base table containing data about space missions."
@@ -204,3 +216,7 @@ models:
       - name: mission_status
         data_type: varchar
         description: "{{ doc('mission_status') }}"
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."

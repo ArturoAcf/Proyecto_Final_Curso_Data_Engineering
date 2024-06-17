@@ -4,10 +4,12 @@ with stg_mas as(
 
 combined_values as(
     select mission_vehicles_ascent as value from stg_mas
-    union
+    union all
     select mission_vehicles_orbit as value from stg_mas
-    union
+    union all
     select mission_vehicles_descent as value from stg_mas
+    union 
+    select null
 ),
 
 dim_vehicle as(
@@ -16,5 +18,5 @@ dim_vehicle as(
 
 select
     {{dbt_utils.generate_surrogate_key(['value'])}} as vehicle_id, 
-    value
+    value as vehicle_name
 from dim_vehicle

@@ -51,6 +51,10 @@ models:
         data_type: number
         description: "Total hours the astronaut has spent in spacewalks (EVA)."
 
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
+
   - name: stg_mission_astronauts
     description: "Staging table for mission-astronaut relationships."
     columns:
@@ -192,6 +196,10 @@ models:
         data_type: varchar
         description: "Height of the fairing used to protect payloads."
 
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
+
   - name: stg_space_agencies
     description: "Staging table for space agency data."
     columns:
@@ -217,6 +225,10 @@ models:
       - name: years_of_service
         data_type: number
         description: "Total years of service of the space agency."
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
 
   - name: stg_space_missions
     description: "Staging table for space mission data."
@@ -259,3 +271,7 @@ models:
       - name: mission_status
         data_type: varchar
         description: "{{ doc('mission_status') }}"
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."

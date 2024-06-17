@@ -16,7 +16,8 @@ stg_rockets as(
         cast(replace(replace(replace(rocket_price, '$', ''), 'million', ''), ',', '') as decimal) as rocket_price_millon_dollars,
         payload_to_gto,
         fairing_diameter,
-        fairing_height
+        fairing_height,
+        loaded_at
     from base_rockets
 )
 

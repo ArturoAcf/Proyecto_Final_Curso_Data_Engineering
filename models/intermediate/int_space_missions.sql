@@ -12,7 +12,8 @@ int_space_missions as(
         mission_time,
         mission_rocket,
         mission_price_millions,
-        mission_status
+        mission_status,
+        loaded_at
     from stg_spm
 )
 

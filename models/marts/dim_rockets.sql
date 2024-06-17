@@ -2,6 +2,10 @@ with stg_rockets as(
     select * from {{ref('stg_rockets')}}
 ),
 
+stg_spm as(
+    select mission_rocket from {{ref('stg_space_missions')}}
+),
+
 dim_rockets as(
     select
         rocket_id,
@@ -16,8 +20,27 @@ dim_rockets as(
         rocket_price_millon_dollars,
         payload_to_gto,
         fairing_diameter,
-        fairing_height
+        fairing_height,
+        loaded_at
     from stg_rockets
+    union 
+    select 
+        {{dbt_utils.generate_surrogate_key(['mission_rocket'])}},
+        mission_rocket,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    from stg_spm 
+    where mission_rocket not in (select rocket_name name from stg_rockets)
 )
 
 select * from dim_rockets
