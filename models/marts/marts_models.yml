@@ -186,10 +186,6 @@ models:
               to: ref('dim_astronauts')
               field: astronaut_id
 
-      - name: astronaut_name
-        data_type: varchar
-        description: "Name of the astronaut."
-
       - name: astronaut_role_id
         data_type: varchar
         description: "Role of the astronaut in the mission."
