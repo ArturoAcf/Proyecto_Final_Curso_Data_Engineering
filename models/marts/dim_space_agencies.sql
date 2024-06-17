@@ -1,3 +1,8 @@
+{{config(
+    materialized = 'incremental',
+    unique_key = ['agency_id']
+)}}
+
 with stg_spag as(
     select * from {{ref('stg_space_agencies')}}
 ),
@@ -28,3 +33,7 @@ dim_space_agencies as(
 )
 
 select * from dim_space_agencies
+
+{% if is_incremental() %}
+    where loaded_at >= (select max(loaded_at) from {{ this }})
+{% endif %}

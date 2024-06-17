@@ -1,16 +1,25 @@
-with stg_spag as(
-    select * from {{ref('base_space_agencies')}}
+{{config(
+    materialized = 'incremental',
+    unique_key = ['agency_name_id']
+)}}
+
+with snap_spag as(
+    select * from {{ref('space_agencies')}}
+
+    {% if is_incremental() %}
+        where loaded_at >= (select max(loaded_at) from {{ this }})
+    {% endif %}
 ),
 
 stg_space_agencies as(
     select
-        {{dbt_utils.generate_surrogate_key(['agency_name'])}} as agency_name_id,
+        agency_name_id,
         agency_name,
         first_launch_date,
         last_launch_date,
         years_of_service,
         loaded_at
-    from stg_spag
+    from snap_spag
 )
 
 select * from stg_space_agencies

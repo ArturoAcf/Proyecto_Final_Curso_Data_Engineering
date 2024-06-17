@@ -1,0 +1,94 @@
+version: 2
+
+models:
+  - name: rockets
+    description: "Staging table for rocket data."
+    columns:
+      - name: rocket_id
+        data_type: varchar
+        description: "Identifier for the rocket."
+        tests:
+          - unique
+          - not_null
+
+      - name: rocket_name
+        data_type: varchar
+        description: "Name of the rocket."
+
+      - name: company_name
+        data_type: varchar
+        description: "Name of the company manufacturing the rocket."
+
+      - name: rocket_status
+        data_type: varchar
+        description: "{{ doc('rocket_status') }}"
+
+      - name: liftoff_thrust
+        data_type: varchar
+        description: "Thrust generated during liftoff."
+
+      - name: payload_to_leo
+        data_type: number
+        description: "Payload capacity to Low Earth Orbit (LEO) in kilograms."
+
+      - name: stages
+        data_type: number
+        description: "Number of stages in the rocket."
+
+      - name: strap_ons
+        data_type: number
+        description: "Number of strap-on boosters attached to the rocket."
+
+      - name: rocket_height
+        data_type: varchar
+        description: "Height of the rocket."
+
+      - name: rocket_price_millon_dollars
+        data_type: number
+        description: "Cost of the rocket in million dollars."
+
+      - name: payload_to_gto
+        data_type: number
+        description: "Payload capacity to Geostationary Transfer Orbit (GTO) in kilograms."
+
+      - name: fairing_diameter
+        data_type: varchar
+        description: "Diameter of the fairing used to protect payloads."
+
+      - name: fairing_height
+        data_type: varchar
+        description: "Height of the fairing used to protect payloads."
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
+
+  - name: space_agencies
+    description: "Staging table for space agency data."
+    columns:
+      - name: agency_name_id
+        data_type: varchar
+        description: "Identifier for the agency name."
+        tests:
+          - unique
+          - not_null
+
+      - name: agency_name
+        data_type: varchar
+        description: "Name of the space agency."
+
+      - name: first_launch_date
+        data_type: date
+        description: "Date of the first launch by the agency."
+
+      - name: last_launch_date
+        data_type: date
+        description: "Date of the most recent launch by the agency."
+
+      - name: years_of_service
+        data_type: number
+        description: "Total years of service of the space agency."
+
+      - name: loaded_at
+        data_type: timestamp
+        description: "When the record was loaded into the database."
