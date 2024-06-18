@@ -26,7 +26,9 @@ stg_rockets as(
         payload_to_gto,
         fairing_diameter,
         fairing_height,
-        loaded_at
+        loaded_at,
+        dbt_valid_from,
+        dbt_valid_to
     from snap_rockets
 )
 

@@ -1,5 +1,5 @@
 {{config(
-    materialized = 'incremental',
+    materialized = 'snapshot',
     unique_key = ['rocket_id']
 )}}
 

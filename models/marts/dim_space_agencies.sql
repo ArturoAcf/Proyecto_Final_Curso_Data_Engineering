@@ -18,12 +18,16 @@ dim_space_agencies as(
         first_launch_date,
         last_launch_date,
         years_of_service,
-        loaded_at
+        loaded_at,
+        dbt_valid_from,
+        dbt_valid_to
     from stg_spag
     union
     select distinct 
         {{dbt_utils.generate_surrogate_key(['company_name'])}},
         company_name,
+        null,
+        null,
         null,
         null,
         null,
