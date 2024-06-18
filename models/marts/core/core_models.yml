@@ -55,9 +55,27 @@ models:
         data_type: varchar
         description: "State or city where the location is situated."
 
+      - name: country_id
+        data_type: varchar
+        description: "Country ID."
+        tests:
+          - relationships:
+                  to: ref('dim_country')
+                  field: country_id
+
+  - name: dim_country
+    description: "Dimension table for countries."
+    columns:
+      - name: country_id
+        data_type: varchar
+        description: "Country ID."
+        tests:
+          - unique
+          - not_null
+
       - name: country
         data_type: varchar
-        description: "Country where the location is located."
+        description: "Country name."
 
   - name: dim_time
     description: ""

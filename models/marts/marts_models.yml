@@ -31,9 +31,13 @@ models:
         data_type: number
         description: "Year of astronaut's birth."
 
-      - name: astronaut_nationality
+      - name: astronaut_nationality_id
         data_type: varchar
-        description: "Astronaut's nationality."
+        description: "Astronaut's nationality ID."
+        tests:
+          - relationships:
+                  to: ref('dim_country')
+                  field: country_id
 
       - name: astronaut_is_militar
         data_type: boolean

@@ -10,7 +10,7 @@ stg_astronauts as(
         nation_astronaut_number,
         astronaut_gender,
         astronaut_birth_year,
-        astronaut_nationality,
+        replace(astronaut_nationality, 'U.S.', 'USA') as astronaut_nationality,
         astronaut_is_militar,
         astronaut_mission_count,
         astronaut_total_hours_in_space,

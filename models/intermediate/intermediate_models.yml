@@ -1,6 +1,36 @@
 version: 2
 
 models:
+  - name: int_locations
+    description: "Dimension table for locations."
+    columns:
+      - name: location_id
+        data_type: varchar
+        description: "Unique location ID."
+        tests:
+          - unique
+          - not_null
+
+      - name: mission_location
+        data_type: varchar
+        description: "Name of the mission location."
+
+      - name: address
+        data_type: varchar
+        description: "Address of the location."
+
+      - name: place
+        data_type: varchar
+        description: "Specific place or landmark."
+
+      - name: state_or_city
+        data_type: varchar
+        description: "State or city where the location is situated."
+
+      - name: country
+        data_type: varchar
+        description: "Country where the location is located."
+
   - name: int_mission_astronauts
     description: "Details of astronaut missions."
     columns:

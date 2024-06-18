@@ -45,9 +45,7 @@ models:
       +database: "{{ env_var('DBT_ENVIRONMENTS') }}_GOLD_DB"
       core:
         +schema: core
-# seeds:
-#   +schema: seed_data
-#   +database: "{{ env_var('DBT_ENVIRONMENTS') }}BRONZEDB"        
+     
 snapshots:
   +transient: false
   +target_database: "{{ env_var('DBT_ENVIRONMENTS') }}SILVER_DB"
