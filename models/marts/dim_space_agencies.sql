@@ -24,7 +24,7 @@ dim_space_agencies as(
     from stg_spag
     union
     select distinct 
-        {{dbt_utils.generate_surrogate_key(['company_name'])}},
+        {{dbt_utils.generate_surrogate_key(['company_name'])}} as agency_id,
         company_name,
         null,
         null,
@@ -32,7 +32,7 @@ dim_space_agencies as(
         null,
         null,
         null
-    from stg_spm
+    from stg_spm ispm
     where company_name not in (select agency_name from stg_spag)
 )
 
