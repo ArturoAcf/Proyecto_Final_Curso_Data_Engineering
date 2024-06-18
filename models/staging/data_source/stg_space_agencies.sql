@@ -18,7 +18,9 @@ stg_space_agencies as(
         first_launch_date,
         last_launch_date,
         years_of_service,
-        loaded_at
+        loaded_at,
+        dbt_valid_from,
+        dbt_valid_to
     from snap_spag
 )
 

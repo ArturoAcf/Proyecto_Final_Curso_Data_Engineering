@@ -30,12 +30,16 @@ dim_rockets as(
         payload_to_gto,
         fairing_diameter,
         fairing_height,
-        loaded_at
+        loaded_at,
+        dbt_valid_from,
+        dbt_valid_to
     from stg_rockets
     union 
     select 
         {{dbt_utils.generate_surrogate_key(['mission_rocket'])}},
         mission_rocket,
+        null,
+        null,
         null,
         null,
         null,

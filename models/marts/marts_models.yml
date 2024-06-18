@@ -121,6 +121,14 @@ models:
         data_type: timestamp
         description: "When the record was loaded into the database."
 
+      - name: dbt_valid_from
+        data_type: timestamp
+        description: "Valid from."
+
+      - name: dbt_valid_to
+        data_type: timestamp
+        description: "Valid to."
+
   - name: dim_space_agencies
     description: "Dimension table for space agencies."
     columns:
@@ -150,6 +158,14 @@ models:
       - name: loaded_at
         data_type: timestamp
         description: "When the record was loaded into the database."
+
+      - name: dbt_valid_from
+        data_type: timestamp
+        description: "Valid from."
+
+      - name: dbt_valid_to
+        data_type: timestamp
+        description: "Valid to."
 
   - name: dim_astronaut_roles
     description: ""

@@ -200,6 +200,14 @@ models:
         data_type: timestamp
         description: "When the record was loaded into the database."
 
+      - name: dbt_valid_from
+        data_type: timestamp
+        description: "Valid from."
+
+      - name: dbt_valid_to
+        data_type: timestamp
+        description: "Valid to."
+
   - name: stg_space_agencies
     description: "Staging table for space agency data."
     columns:
@@ -229,6 +237,14 @@ models:
       - name: loaded_at
         data_type: timestamp
         description: "When the record was loaded into the database."
+
+      - name: dbt_valid_from
+        data_type: timestamp
+        description: "Valid from."
+
+      - name: dbt_valid_to
+        data_type: timestamp
+        description: "Valid to."
 
   - name: stg_space_missions
     description: "Staging table for space mission data."
