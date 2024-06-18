@@ -8,6 +8,7 @@ int_space_missions as(
         mission_name,
         mission_date,
         company_name,
+        {{dbt_utils.generate_surrogate_key(['company_name'])}} as company_name_id,
         mission_location,
         mission_time,
         mission_rocket,

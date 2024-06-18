@@ -20,7 +20,7 @@ fct_space_missions as(
         ispm.mission_id,
         ispm.mission_name,
         ispm.mission_date,
-        {{dbt_utils.generate_surrogate_key(['ispm.company_name'])}} as company_name_id,
+        ispm.company_name_id,
         {{dbt_utils.generate_surrogate_key(['ispm.mission_location'])}} as mission_location_id,
         ispm.mission_time,
         {{dbt_utils.generate_surrogate_key(['ispm.mission_rocket'])}} as mission_rocket_id,

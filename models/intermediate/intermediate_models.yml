@@ -133,6 +133,10 @@ models:
         data_type: varchar
         description: "Name of the organizing company."
 
+      - name: company_name_id
+        data_type: varchar
+        description: "ID of the organizing company."
+
       - name: mission_location
         data_type: varchar
         description: "Location of the mission launch."

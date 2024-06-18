@@ -16,7 +16,7 @@
 
 select 
     {{dbt_utils.generate_surrogate_key(['agency_name'])}} as agency_name_id,
-    agency_name,
+    replace(agency_name, 'Arm??e de l''Air', 'Armée de l''Air') as agency_name,
     first_launch_date,
     last_launch_date,
     years_of_service,
