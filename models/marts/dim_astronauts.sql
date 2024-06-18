@@ -10,7 +10,7 @@ dim_astronauts as(
         nation_astronaut_number,
         astronaut_gender,
         astronaut_birth_year,
-        astronaut_nationality,
+        {{dbt_utils.generate_surrogate_key(['astronaut_nationality'])}} as astronaut_nationality_id,
         astronaut_is_militar,
         astronaut_mission_count,
         astronaut_total_hours_in_space,
