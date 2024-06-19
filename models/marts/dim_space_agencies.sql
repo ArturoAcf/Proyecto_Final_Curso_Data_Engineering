@@ -1,6 +1,6 @@
 {{config(
     materialized = 'incremental',
-    unique_key = ['agency_id']
+    unique_key = ['agency_id', 'dbt_valid_to']
 )}}
 
 with stg_spag as(

@@ -61,13 +61,18 @@ models:
 
   - name: dim_rockets
     description: "Dimension table for rockets."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - rocket_id
+            - dbt_valid_to
+
     columns:
       - name: rocket_id
         data_type: varchar
         description: "Unique rocket ID."
-        # tests:
-        #   - unique
-        #   - not_null
+        tests:
+          - not_null
 
       - name: rocket_name
         data_type: varchar
@@ -131,13 +136,13 @@ models:
 
   - name: dim_space_agencies
     description: "Dimension table for space agencies."
+
     columns:
       - name: agency_id
         data_type: varchar
         description: "Unique agency ID."
-        # tests:
-        #   - unique
-        #   - not_null
+        tests:
+          - not_null
 
       - name: agency_name
         data_type: varchar

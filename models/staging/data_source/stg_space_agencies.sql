@@ -1,14 +1,10 @@
 {{config(
     materialized = 'incremental',
-    unique_key = ['agency_name_id']
+    unique_key = ['agency_name_id', 'dbt_valid_to']
 )}}
 
 with snap_spag as(
     select * from {{ref('space_agencies')}}
-
-    {% if is_incremental() %}
-        where loaded_at >= (select max(loaded_at) from {{ this }})
-    {% endif %}
 ),
 
 stg_space_agencies as(
@@ -25,3 +21,7 @@ stg_space_agencies as(
 )
 
 select * from stg_space_agencies
+
+{% if is_incremental() %}
+    where loaded_at >= (select max(loaded_at) from {{ this }})
+{% endif %}
