@@ -5,7 +5,7 @@ with base_sag as(
 base_s_agencies as(
     select
         _row,
-        agency as agency_name,
+        replace(agency, 'Arm??e de l''Air', 'Armée de l''Air') agency_name,
         first_launch as first_launch_date,
         last_launch as last_launch_date,
         years_of_service,
