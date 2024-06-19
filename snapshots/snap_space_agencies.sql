@@ -1,8 +1,3 @@
-{{config(
-    materialized= 'snapshot',
-    unique_key = ['agency_name_id']
-)}}
-
 {% snapshot space_agencies %}
 
 {{
@@ -22,10 +17,6 @@ select
     years_of_service,
     loaded_at
 from {{ref('base_space_agencies')}}
-
-{% if is_incremental() %}
-  where loaded_at >= (select max(loaded_at) from {{ this }})
-{% endif %}
 
 {% endsnapshot %}
 

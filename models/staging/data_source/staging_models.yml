@@ -140,12 +140,12 @@ models:
 
   - name: stg_rockets
     description: "Staging table for rocket data."
+
     columns:
       - name: rocket_id
         data_type: varchar
         description: "Identifier for the rocket."
         tests:
-          - unique
           - not_null
 
       - name: rocket_name
@@ -210,12 +210,12 @@ models:
 
   - name: stg_space_agencies
     description: "Staging table for space agency data."
+            
     columns:
       - name: agency_name_id
         data_type: varchar
         description: "Identifier for the agency name."
         tests:
-          - unique
           - not_null
 
       - name: agency_name

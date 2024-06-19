@@ -3,12 +3,17 @@ version: 2
 models:
   - name: rockets
     description: "Staging table for rocket data."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - rocket_id
+            - dbt_valid_to
+
     columns:
       - name: rocket_id
         data_type: varchar
         description: "Identifier for the rocket."
         tests:
-          - unique
           - not_null
 
       - name: rocket_name
@@ -65,12 +70,17 @@ models:
 
   - name: space_agencies
     description: "Staging table for space agency data."
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - agency_name_id
+            - dbt_valid_to
+
     columns:
       - name: agency_name_id
         data_type: varchar
         description: "Identifier for the agency name."
         tests:
-          - unique
           - not_null
 
       - name: agency_name
