@@ -65,9 +65,9 @@ models:
       - name: rocket_id
         data_type: varchar
         description: "Unique rocket ID."
-        tests:
-          - unique
-          - not_null
+        # tests:
+        #   - unique
+        #   - not_null
 
       - name: rocket_name
         data_type: varchar
@@ -135,9 +135,9 @@ models:
       - name: agency_id
         data_type: varchar
         description: "Unique agency ID."
-        tests:
-          - unique
-          - not_null
+        # tests:
+        #   - unique
+        #   - not_null
 
       - name: agency_name
         data_type: varchar

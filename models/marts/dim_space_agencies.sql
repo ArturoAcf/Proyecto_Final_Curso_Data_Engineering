@@ -33,7 +33,7 @@ dim_space_agencies as(
         null,
         null
     from stg_spm ispm
-    where company_name not in (select agency_name from stg_spag)
+    where company_name not in (select agency_name from stg_spag) 
 )
 
 select * from dim_space_agencies

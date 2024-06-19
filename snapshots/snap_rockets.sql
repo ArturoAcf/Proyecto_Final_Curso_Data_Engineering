@@ -1,8 +1,3 @@
-{{config(
-    materialized = 'snapshot',
-    unique_key = ['rocket_id']
-)}}
-
 {% snapshot rockets %}
 
 {{
