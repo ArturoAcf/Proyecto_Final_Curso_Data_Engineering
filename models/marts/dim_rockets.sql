@@ -1,14 +1,5 @@
-{{config(
-    materialized = 'incremental',
-    unique_key = ['rocket_id']
-)}}
-
 with stg_rockets as(
     select * from {{ref('stg_rockets')}}
-
-    {% if is_incremental() %}
-        where loaded_at >= (select max(loaded_at) from {{ this }})
-    {% endif %}
 ),
 
 stg_spm as(
@@ -34,6 +25,7 @@ dim_rockets as(
         dbt_valid_from,
         dbt_valid_to
     from stg_rockets
+    where stg_rockets.dbt_valid_to is null
     union 
     select 
         {{dbt_utils.generate_surrogate_key(['mission_rocket'])}},

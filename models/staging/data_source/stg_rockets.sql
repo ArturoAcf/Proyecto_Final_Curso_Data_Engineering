@@ -1,14 +1,5 @@
-{{config(
-    materialized = 'incremental',
-    unique_key = ['rocket_id']
-)}}
-
 with snap_rockets as(
     select * from {{ref('rockets')}}
-
-    {% if is_incremental() %}
-        where loaded_at >= (select max(loaded_at) from {{ this }})
-    {% endif %}
 ),
 
 stg_rockets as(
