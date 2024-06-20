@@ -27,7 +27,3 @@ select
 from {{ref('base_rockets')}}
 
 {% endsnapshot %}
-
-{% if is_incremental() %}
-    where loaded_at >= (select max(loaded_at) from {{ this }})
-{% endif %}

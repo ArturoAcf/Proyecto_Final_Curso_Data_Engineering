@@ -1,6 +1,6 @@
 {{config(
     materialized = 'incremental',
-    unique_key = ['agency_id', 'dbt_valid_to']
+    unique_key = ['agency_id', 'agency_name']
 )}}
 
 with stg_spag as(
@@ -19,8 +19,6 @@ dim_space_agencies as(
         last_launch_date,
         years_of_service,
         loaded_at,
-        dbt_valid_from,
-        dbt_valid_to
     from stg_spag
     union
     select distinct 
@@ -30,8 +28,6 @@ dim_space_agencies as(
         null,
         null,
         null,
-        null,
-        null
     from stg_spm ispm
     where company_name not in (select agency_name from stg_spag) 
 )

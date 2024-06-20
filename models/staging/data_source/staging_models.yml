@@ -146,6 +146,7 @@ models:
         data_type: varchar
         description: "Identifier for the rocket."
         tests:
+          - unique
           - not_null
 
       - name: rocket_name
@@ -216,6 +217,7 @@ models:
         data_type: varchar
         description: "Identifier for the agency name."
         tests:
+          - unique
           - not_null
 
       - name: agency_name
@@ -237,14 +239,6 @@ models:
       - name: loaded_at
         data_type: timestamp
         description: "When the record was loaded into the database."
-
-      - name: dbt_valid_from
-        data_type: timestamp
-        description: "Valid from."
-
-      - name: dbt_valid_to
-        data_type: timestamp
-        description: "Valid to."
 
   - name: stg_space_missions
     description: "Staging table for space mission data."
