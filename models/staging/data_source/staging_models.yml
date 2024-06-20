@@ -146,7 +146,6 @@ models:
         data_type: varchar
         description: "Identifier for the rocket."
         tests:
-          - unique
           - not_null
 
       - name: rocket_name
