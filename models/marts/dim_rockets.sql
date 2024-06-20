@@ -7,7 +7,7 @@ stg_spm as(
 ),
 
 dim_rockets as(
-    select
+    select distinct
         rocket_id,
         rocket_name,
         company_name,
