@@ -70,7 +70,7 @@ En cuanto a la parte de *testing*, he aplicado tests genéricos para comprobar q
 
 Por otra parte, he empleado el paquete *dbt_project_evaluator*, que realiza ciertas comprobaciones de buenas prácticas mediante la creación de modelos propios que lanzan determinadas consultas a Snowflake.
 
-![Dbt_Build](https://github.com/ArturoAcf/Proyecto_Final_Curso_Data_Engineering/assets/93375380/c4bdfd72-179c-4d19-9d6b-8d6aa953cd84)
+![build](https://github.com/ArturoAcf/Proyecto_Final_Curso_Data_Engineering/assets/93375380/00ce40e2-5a8a-4118-8feb-963ffdf31439)
 
 ## Documentación
 
