@@ -62,6 +62,10 @@ En esta capa, el modelo toma su forma final. De las capas Stages e Intermediate,
 
 ![DAG](https://github.com/ArturoAcf/Proyecto_Final_Curso_Data_Engineering/assets/93375380/73a30e56-a058-4c84-a0bc-89cfdd4f0b3a)
 
+#### Diagrama final
+
+![dimdig](https://github.com/ArturoAcf/Proyecto_Final_Curso_Data_Engineering/assets/93375380/1130265c-311c-4b3d-bc22-7e6a42e67208)
+
 # Documentación y Tests
 
 ## Tests
